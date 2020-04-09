@@ -1,0 +1,73 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("fonts/opensans.woff2") format("woff2"), url("fonts/opensans.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("fonts/opensansbold.woff2") format("woff2"), url("fonts/opensansbold.woff")
+    format("woff");
+}
+@font-face {
+  font-weight: light;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("fonts/opensanslight.woff2") format("woff2"), url("fonts/opensanslight.woff")
+    format("woff");
+}
+
+body {
+  width: 320px;
+  margin: 0 auto;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @bg-blue;
+  font-style: normal;
+  text-align: center;
+
+  background-color: @bg-darkblue;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center 270px;
+  background-repeat: no-repeat;
+  background-size: 320px 462px;
+
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-main__title {
+  height: 169px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: @bg-white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 34px;
+}
