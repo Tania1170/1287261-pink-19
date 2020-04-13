@@ -40,3 +40,29 @@
   border-top: 1px solid rgba(255,255,255,0.15);
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
+
+.main-nav--opened .main-nav__toogle {
+  top: 0;
+  left: auto;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 18px;
+    left: 275px;
+
+    width:36px;
+    height: 2px;
+
+    background-color: @bg-white;
+      }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
