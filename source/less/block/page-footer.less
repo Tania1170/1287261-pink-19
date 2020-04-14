@@ -10,23 +10,20 @@
   padding-top: 47px;
 }
 
-.item__text {
+.contacts__item--text {
   font-size: 18px;
   font-weight: bold;
   line-height: normal;
 }
 
-.item__content {
+.contacts__item--content {
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
   color: @bg-red;
   text-decoration: none;
-}
-
-.item__address {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .social__list {
@@ -47,4 +44,18 @@
 .page-footer__copyright {
   padding-top: 45px;
   padding-bottom: 41px;
+}
+.page-footer__logo img{
+  margin-top: 39px;
+}
+
+.page-footer__social {
+  padding-top: 39px;
+}
+@media (min-width: @tablet-width) {
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+  
+}
 }

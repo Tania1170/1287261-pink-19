@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  min-width: 320px;
+  width: 100%;
   background-color: @bg-darkblue;
   min-height: 326px;
   z-index: 1;
@@ -8,10 +8,35 @@
 
 .page-header__logo {
   width: 74px;
-  height: 23px;
+  min-height: 41px;
   display: block;
   padding-top: 20px;
   padding-left:20px;
-  padding-bottom: 27px;
+  padding-bottom: 11px;
+}
 
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 100%;
+    min-height: 366px;
+    background-color: rgba(22,29,38,0.3);
+    }
+  .page-header__logo {
+    min-height: 53px;
+    padding-bottom: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 100%;
+    min-height: 110px;
+    display: flex;
+  }
+  .page-header__logo {
+    width:150px;
+    padding-top: 45px;
+    padding-right: 166px;
+    padding-left: 130px;
+  }
 }
