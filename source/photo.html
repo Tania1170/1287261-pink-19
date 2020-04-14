@@ -3,16 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/normalize.css" rel="stylescheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="logotype-mobile.svg"
-        width="75" height="22" alt="Логотип приложения "Пинк"">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg"
+        width="75" height="22" alt="Логотип приложения 'Пинк'">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toogle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper"
+        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
@@ -37,81 +41,98 @@
       <section class="gallery">
         <h2 class="visually-hidden">Фотогалерея</h2>
         <p class="gallery__intro">Взгляните на фотографии, которые выкладывают
-          пользователи!Видите, как не хватает ваших?</p>
-          <figure class="gallery__content content">
-            <a class="content__picture" href="#">
-              <span class="content__day">панорама дня</span>
-              <img  class="content__image" src="https://via.placeholder.com
-              320×137"></a>
-            <p class="content__author-name">Анна<span class="content__time">
+          пользователи! Видите, как не хватает ваших?</p>
+         
+            <figure class="gallery__content content-big">
+              <a class="content__picture" href="#">
+                <span class="content__day">панорама дня</span>
+                <img  class="content__image" src="https://via.placeholder.com
+              320×180"></a>
+              <div class="content__description description-big">
+              <p class="description__author-name">Анна<span class="description__time">
               (5 минут назад)</span</p>
-            <p class="content__comment">Прыгать или нет?Напишите в комментарии
+              <p class="description__comment">Прыгать или нет? Напишите в комментарии
                свой совет и смотрите прямую трансляцию в перископе, задавайте свои
                 вопросы!</p>
-            <p class="content__rating">Нравится: 215</p>
-          </figure>
-          <figure class="gallery__content content">
-            <a href="content__picture">
-              <img class="content__image" src="https://via.placeholder.com
+              <p class="description__rating">Нравится: 215</p>
+            </div>
+            </figure>
+            <div class="gallery__wrapper">
+            <figure class="gallery__content content">
+              <a href="content__picture">
+                <img class="content__image" src="https://via.placeholder.com
               280×180"></a>
-            <p class="content__author-name">Левон<span class="content__time">
+              <div class="content__description description">
+              <p class="description__author-name">Левон<span class="description__time">
               (5 часов назад)</span></p>
-            <p class="content__comment">Вчера он на луну летал, сегодня в
+              <p class="description__comment">Вчера он на луну летал, сегодня в
               руки к нам попал.</p>
-            <p class="content__rating">Нравится: 356</p>
-          </figure>
-          <figure class="gallery__content content">
-            <a class="content__picture" href="#">
-              <img class="content__image" src="https://via.placeholder.com
+              <p class="description__rating">Нравится: 356</p>
+            </div>
+            </figure>
+            <figure class="gallery__content content">
+              <a class="content__picture" href="#">
+                <img class="content__image" src="https://via.placeholder.com
               280×180"></a>
-            <p class="content__author-name">Антон<span class="content__time">
-            (12 часов назад)</span></p>
-            <p class="content__comment">Соседи будут рады!</p>
-            <p class="content__rating">Нравится: 666</p>
-          </figure>
-          <figure class="gallery__content content">
-            <a class="content__picture" href="#"
-              <img class="content__image" src="https://via.placeholder.com
+              <div class="content__description description">
+              <p class="description__author-name">Антон<span class="description__time">
+              (12 часов назад)</span></p>
+              <p class="description__comment">Соседи будут рады!</p>
+              <p class="description__rating">Нравится: 666</p>
+            </div>
+            </figure>
+            <figure class="gallery__content content">
+              <a class="content__picture" href="#">
+                <img class="content__image" src="https://via.placeholder.com
               280×180"></a>
-            <p class="content__author-name">Борис<span class="content__time">
+              <div class="content__description description">
+              <p class="description__author-name">Борис<span class="description__time">
               (20 часов назад)</span></p>
-            <p class="content__comment">Здесь могла быть ваша цитата о
+              <p class="description__comment">Здесь могла быть ваша цитата о
               высоком и вечном.</p>
-            <p class="content__rating">Нравится: 215</p>
-          </figure>
-          <figure class="gallery_content content">
-            <a class="content__picture" href="#">
-              <img class="content_image" src="https://via.placeholder.com
-              280×180"></a>
-            <p class="content__author-name">Сергей<span class="content__time">
-              (25 часов назад)</span></p>
-            <p class="content__comment">Самая кубанская в мире!</p>
-            <p class="content__rating">Нравится: 4</p>
-          </figure>
-          <figure class="gallery__content content">
-            <a class="content__picture" href="#">
-              <img class="content__image" src="https://via.placeholder.com
-              280×180"></a>
-            <p class="content__author-name">Максим<span class="content__time">
-              (40 часов назад)</span></p>
-            <p class="content__comment">Где снег-то?</p>
-            <p class="content__rating">Нравится: 150</p>
-          </figure>
-          <figure class="gallery__content content">
-            <a class="content__picture" href="#"
-              <img class="content__image" src="https://via.placeholder.com
-              280×180"></a>
-            <p class="content__author-name">Надежда<span class="content__time">
+              <p class="description__rating">Нравится: 215</p>
+            </div>
+            </figure>
+            <figure class="gallery__content content">
+              <a class="content__picture" href="#">
+                <img class="content_image" src="https://via.placeholder.com
+               280×180"></a>
+               <div class="content__description description">
+              <p class="description__author-name">Сергей<span class="description__time">
+               (25 часов назад)</span></p>
+              <p class="description__comment">Самая кубанская в мире!</p>
+              <p class="description__rating">Нравится: 4</p>
+            </div>
+            </figure>
+            <figure class="gallery__content content">
+              <a class="content__picture" href="#">
+                <img class="content__image" src="https://via.placeholder.com
+               280×180"></a>
+               <div class="content__description description">
+              <p class="description__author-name">Максим<span class="description__time">
+               (40 часов назад)</span></p>
+              <p class="description__comment">Где снег-то?</p>
+              <p class="description__rating">Нравится: 150</p>
+            </div>
+            </figure>
+            <figure class="gallery__content content">
+              <a class="content__picture" href="#">
+                <img class="content__image" src="https://via.placeholder.com
+                280×180"></a>
+              <div class="content__description description">
+              <p class="description__author-name">Надежда<span class="description__time">
               (45 часов назад)</span></p>
-            <p class="content__comment">Всем GM и взаимные лайки!</p>
-            <p class="content__rating">Нравится: 2560</p>
-          </figure>
+              <p class="description__comment">Всем GM и взаимные лайки!</p>
+              <p class="description__rating">Нравится: 2560</p>
+            </div>
+            </figure>
+          </div>
    </main>
 
    <footer class="page-footer">
      <div class="page-footer__wrapper">
        <a class="page-footer__logo" href="index.html">
-         <img src="https://via.placeholder.com 147×40">Логотип приложения</a>"
+         <img src="img/logo-pink-blue-mobile.svg"></a>
        <div class="page-footer__social social">
          <ul class="social__list">
            <li class="social__item">
