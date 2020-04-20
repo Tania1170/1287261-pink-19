@@ -2,11 +2,11 @@
   background-color: @bg-white;
   min-height: 218px;
   font-size: 24px;
-  line-height: normal;
+  line-height: 32px;
   font-weight: 300;
   color: @bg-blue;
   text-align: center;
-  padding-top:26px;
+  padding-top: 15px;
 }
 
 .application-features {
@@ -22,7 +22,7 @@
   padding: 0;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 80px;
+  padding-top: 47px;
 
 }
 
@@ -31,28 +31,52 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-}
-.reviews {
-  background-color: @bg-white;
-  min-height:354px;
-  line-height: 30px;
+  margin-bottom: 12px;
 }
 
-.reviews__author-name {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1.67;
-  color: #000000;
+.application-features__description {
+  margin-bottom:32px;
+}
+
+@media (min-width: @tablet-width) {
+  .application-features__appeal {
+   min-height: 242px;
+}
+.application-features {
+  background-color: @bg-grey;
+
+}
+.application-features__wrapper {
+  min-height: 488px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.application-features__photo {
+  width: 257px;
+  height:488px;
+  padding:0;
   margin: 0;
-  padding-top: 50px;
 }
 
-.reviews__item {
-  margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
 
+.application-features__list {
+  min-width: 310px;
+  min-height: 488px;
+}
 }
 
-.reviews__toggles {
+@media (min-width: @desktop-width) {
+  .application-features__appeal{
+  min-height: 323px;
+  padding-top: 80px;
+}
+ .application-features__list {
+   min-width: 940px;
+   display: flex;
+   padding-left: 130px;
+   padding-right: 130px;
+ }
+ .application-features__wrapper {
+    flex-direction: column-reverse;
+ }
 }

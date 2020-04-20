@@ -3,19 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/normalize.css" rel="stylescheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+     document.createElement("picture");
+    </script>
+    <script src="picturefill.js" async></script>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="logotype-mobile.svg"
-        width="75" height="22" alt="Логотип приложения "Пинк"">
+        <picture>
+          <source media="min-width: 1200px" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-pink-white-tablet.svg">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg"
+        width="75" height="22" alt="Логотип приложения 'Пинк'">
+        </picture>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toogle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper"
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">
+          Открыть меню</span></button>
+          <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item--active">
-              <a href="">Главная</a>
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
             </li>
             <li class="site-list__item">
               <a href="photo.html">Фотографии</a>
@@ -37,8 +50,9 @@
        <section class="download">
          <h2 class="visually-hidden">Скачать приложение</h2>
          <p class="download__slogan">Взгляните на жизнь иначе!</p>
-         <a class"download__button" href="">Скачать приложение</a>
          <div class="download__wrapper">
+         <a class="download__button" href="#">Скачать приложение</a>
+         <div class="plattforms__wrapper">
            <ul class="download__platforms platforms">
              <li class="platforms__item">
                <a class="platforms__link platforms__link--apple" href="#">
@@ -56,6 +70,7 @@
           </div>
           <p class="download__information">Доступно для iPhone, iPad, Android,
              Windows Phone, OS X, Windows 8</p>
+        </div>
        </section>
 
        <section class="application-features">
@@ -84,13 +99,62 @@
                     комментируйте, делитесь фотографиями с друзьями и заводите
                      новых</p>
               </li>
+            </ul>
               <p class="application-features__photo">
                 <img src="https://via.placeholder.com 157×320">
               </p>
-           </ul>
        </div>
        </section>
 
-    </main>
+       <section class="reviews">
+         <div class="reviews__author-name">Николай Петров</div>
+         <p class="reviews__item">«Это приложение перевернуло мой мир и
+           позволило по-новому взглянуть на привычные серые вещи! А еще я
+           познакомился со своей будущей женой в комментариях к выложенной
+           фотографии!»</p>
+         <p class="reviews_toogles slider__toogles">
+           <button class="slider__toogle" type="button">1</button>
+           <button class="slider__toogle" type="button">2</button>
+           <button class="slider__toogle" type="button">3</button>
+         </p>
+       </section>
+     </main>
+
+       <footer class="page-footer">
+         <div class="page-footer__wrapper">
+           <p class="page-footer__title">Остались вопросы? Свяжитесь с нами!</p>
+           <div class="page-footer__contacts contacts">
+             <p class="contacts__item contacts__item--text">Звоните:</p>
+             <a class="contacts__item contacts__item--content" href="+7(812)555-66-66">
+               +7 (812) 555-66-66</a>
+            <p class="contacts__item contacts__item--text">Пишите:</p>
+            <a class="contacts__item contacts__item--content" href="mail@htmlacademy.ru">
+              mail@htmlacademy.ru</a>
+            <p class="contacts__item contacts__item--text">Приезжайте в гости:</p>
+            <p class="contacts__item contacts__item--content">ул. Большая
+              Конюшенная, 19/8</p>
+            </div>
+            <div class="page-footer__map map">Карта</div>
+           </div>
+         </div>
+      </footer>
+
+    <script>
+     var navMain = document.querySelector('.main-nav');
+     var navToggle = document.querySelector('.main-nav__toggle');
+
+     navMain.classList.remove('main-nav--nojs');
+
+     navToggle.addEventListener('click', function() {
+       if (navMain.classList.contains('main-nav--closed')) {
+         navMain.classList.remove('main-nav--closed');
+         navMain.classList.add('main-nav--opened');
+       }
+       else {
+         navMain.classList.remove('main-nav--opened');
+         navMain.classList.add('main-nav--closed');
+       }
+     })
+    </script>
   </body>
 </html>
