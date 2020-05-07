@@ -16,7 +16,7 @@
   position: absolute;
   z-index: 2;
   top: 12px;
-  right: 20px;
+  right: 6.25vw;
   display: block;
   width: 54px;
   height: 46px;
@@ -126,8 +126,8 @@
     display:none;
 }
  .main-nav--closed {
-   min-height: 110px;
-   background-color: rgba(22,29,38,0.3);
+   min-height: 65px;
+   background-color: transparent;
  }
 }
 
@@ -139,12 +139,15 @@
   .main-nav__list {
     padding-top: 110px;
   }
+  .main-nav__toggle {
+  top: 37px;
+  }
 }
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {
     min-height: 110px;
-    width: 624px;
-    padding-left: 445px;
+    width: 52vw;
+    padding-left: 37vw;
     display: flex;
     }
   .main-nav__list {

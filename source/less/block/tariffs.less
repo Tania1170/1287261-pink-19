@@ -1,0 +1,240 @@
+.tariffs {
+  background-color: @bg-grey;
+  min-height: 475px;
+ position:relative;
+  width: 100%;
+
+  &::before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height:25px;
+    background: url(../img/bg-triangle-white.svg) no-repeat center top;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-size: cover;
+    display: block;
+  }
+}
+
+.tariffs__table {
+  width: 100%;
+  border-collapse: collapse;
+  top: 93px;
+  position: absolute;
+  left:-390px;
+  text-transform: uppercase;
+
+}
+
+.tariffs__list {
+  font-size: 18px;
+  line-height: 30px;
+  color: @bg-white;
+  background-color: @bg-blue;
+  border-top:none;
+}
+.tariffs__name {
+  padding: 22px 0;
+  border: 2px solid @bg-grey;
+}
+.tariffs__name--grey {
+  background-color: @bg-grey;
+}
+
+.tariffs__name--hit {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/bg-hit.svg);
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 73px;
+    left: 0;
+    top: 0;
+    z-index:2;
+  }
+
+  &::after {
+    content:"нит";
+    position:absolute;
+
+    z-index: 3;
+    width: 24px;
+    height: 26px;
+    color: @bg-white;
+    left: 15px;
+    top:  15px;
+    font-size: 10px;
+    line-height: 21px;
+    font-weight: normal;
+    transform: rotate(-45deg);
+  }
+}
+.tariffs__item td {
+  background-color: @bg-white;
+  height: 60px;
+  line-height: 30px;
+  color: @bg-blue;
+  text-align: left;
+  padding-left: 23px;
+  border: 2px solid #e5e5e5;
+}
+.tariffs__price {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight:300;
+  width: 280px;
+  display:block;
+}
+.tariffs__toggles {
+ margin: 0;
+ padding-left: 10px;
+  padding-top: 420px;
+}
+
+.tariffs__radio {
+  color: @bg-grey;
+}
+
+.tariffs__radio input {
+  display: none;
+}
+  .tariffs__radio span {
+    position:absolute;
+    display:inline-block;
+    top:430px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+
+.tariffs__radio input:checked + span {
+    position: absolute;
+    display:inline-block;
+    top: 428px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    border:3px solid #283645;
+  }
+
+.tariffs__component--no {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 228px;
+    width:37px;
+    height: 3px;
+    border: none;
+
+   background-color: #f25b26;
+      }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.tariffs__component--yes {
+  position: relative;
+  &::after {
+    content:"";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  border:3px solid #3dc644;
+  transform: rotate(45deg);
+  border-top: none;
+  border-left: none;
+  top: 10px;
+  left: 235px;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .tariffs {
+    min-height: 370px;
+  }
+ .tariffs__table {
+   position: relative;
+   margin: 0 auto;
+   top: 80px;
+   width: 620px;
+   padding-left: 20px;
+   left: 0;
+ }
+
+  .tariffs__list {
+    font-size: 16px;
+  }
+  .tariffs__price {
+    font-size: 18px;
+    width: 110px;
+    padding-left: 20px;
+  }
+
+  .tariffs__name {
+    padding: 11px 0;
+  }
+  .tariffs__component--yes span {
+    display: none;
+    font-size: 0;
+  }
+  .tariffs__component--no span {
+    display: none;
+    font-size: 0;
+  }
+
+  .tariffs__component--yes::after {
+    width: 11px;
+    height: 26px;
+    top: 1px;
+    left: 70px;
+  }
+
+  .tariffs__component--no {
+    &::before,
+    &::after {
+      left: 58px;
+      top: 15px;
+    }
+  }
+
+  .tariffs__item td {
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 10px;
+    text-transform: none;
+    height: 44px;
+  }
+ .tariffs__name--hit {
+   &::before {
+     content: "";
+     background-image: url(../img/bg-hit-tablet.svg);
+     width: 61px;
+     height: 61px;
+   }
+   &::after {
+     left: 8px;
+     top: 10px;
+   }
+ }
+
+ .tariffs__toggles {
+   display: none;
+ }
+
+}
