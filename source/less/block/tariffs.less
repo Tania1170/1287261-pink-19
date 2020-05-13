@@ -59,7 +59,7 @@
   }
 
   &::after {
-    content:"нит";
+    content:"хит";
     position:absolute;
 
     z-index: 3;
@@ -186,7 +186,7 @@
   }
 
   .tariffs__name {
-    padding: 11px 0;
+    padding: 20px 3px;
   }
   .tariffs__component--yes span {
     display: none;
@@ -236,5 +236,37 @@
  .tariffs__toggles {
    display: none;
  }
+}
+@media(min-width: @desktop-width) {
+.tariffs {
+min-height: 524px;
+}
+.tariffs__table {
+  top: 150px;
+  width: 940px;
+}
+.tariffs__item td {
+  font-size: 18px;
+  width: 150px;
+  height: 57px;
+}
+.tariffs__price {
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 0;
+}
+
+  .tariffs__component--yes::after {
+    top: 10px;
+    left: 110px;
+  }
+
+  .tariffs__component--no{
+    &::before,
+    &::after {
+    top: 28px;
+    left: 97px;
+  }
+  }
 
 }

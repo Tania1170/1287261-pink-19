@@ -1,13 +1,18 @@
 .page-header__logo {
   position: absolute;
-  width: 74px;
+  left: -53px;
   display: block;
-  padding-top: 20px;
-  padding-left: 6.25vw;
   z-index: 3;
 }
-.page-header__logo img {
+.page-header__logo:hover svg{
+  fill:@bg-red;
+}
+
+.page-header__logo-pink svg {
   width: 74px;
+  height: 23px;
+
+
 }
 
 @media (min-width: @tablet-width) {
@@ -15,20 +20,18 @@
     width: 150px;
     height: 47px;
     padding-top: 25px;
+    left: 3vw;
   }
-  .page-header__logo img {
-    width: 150px;
   }
-}
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
     width:150px;
     padding-top: 20px;
     padding-right: 166px;
-    padding-left: 10.83vw;
+    padding-left: 7.5vw;
   }
-  .page-header__logo img {
+  .page-header__logo svg {
     width:150px;
     height: 59px;
   }
