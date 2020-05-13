@@ -9,8 +9,15 @@
   width: 100%;
   margin: 0 auto;
   min-height: 324px;
+
+}
+.main-nav--closed {
+  background-color: rgba(22,29,38,0.3);
+}
+.main-nav__wrapper {
   background-color: @bg-darkblue;
 }
+
 
 .main-nav__toggle {
   position: absolute;
@@ -141,6 +148,7 @@
   }
   .main-nav__toggle {
   top: 37px;
+  right: 3vw;
   }
 }
 @media (min-width: @desktop-width) {
@@ -149,6 +157,7 @@
     width: 52vw;
     padding-left: 37vw;
     display: flex;
+    background-color: transparent;
     }
   .main-nav__list {
     width: 100%;
