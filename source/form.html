@@ -5,21 +5,25 @@
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width, initial scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link real="preload" href="/fonts/OpenSans.woff2" as="font">
     <link href="css/normalize.css" rel="stylescheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/style.min.css" rel="stylesheet"/>
     <script>
      document.createElement("picture");
     </script>
-    <script src="picturefill.js" async></script>
+    <script src="picturefill.js" async=""></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-pink-white-tablet.svg">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg"
-        width="75" height="22" alt="Логотип приложения 'Пинк'">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения 'Пинк'">
         </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -45,8 +49,10 @@
     </header>
 
     <main class="page-main">
+      <section class="contest">
         <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк
         </h1>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -56,20 +62,25 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Twitter</a>
+              <a class="social__link social__link--facebook" href="#"><span>Facebook</span>
+                <svg width="8.673" height="18.944"><use xlink:href="#icon-facebook"></use></svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Facebook</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="#">Youtube</a>
+              <a class="social__link social__link--youtube" href="#"><span>Youtube</span>
+                <svg width="14.64" height="13.96" viewBox="0 0 14.64 13.96">
+                  <use xlink:href="#icon-youtube"></use></svg>
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class=" button copyright__link" href="https://htmlacademy.ru/intensive/
-          adaptive">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/
+          adaptive" aria-label="HTMLAcademy">
+          <svg width="16" height="16"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+        </a>
+
         </div>
       </div>
     </footer>
@@ -91,6 +102,8 @@
        }
      })
     </script>
+    <script src=" /path/to/svg4everybody.js"></script>
+    <script>svg4everybody();</script>
 
   </body>
 </html>

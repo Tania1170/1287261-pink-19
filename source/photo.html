@@ -5,21 +5,24 @@
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width, initial scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link real="preload" href="/fonts/OpenSans.woff2" as="font">
     <link href="css/normalize.css" rel="stylescheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/style.min.css" rel="stylesheet"/>
     <script>
      document.createElement("picture");
     </script>
-    <script src="picturefill.js" async></script>
+    <script src="picturefill.js" async=""></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-pink-white-tablet.svg">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg"
-        width="75" height="22" alt="Логотип приложения 'Пинк'">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип приложения 'Пинк'">
         </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -56,32 +59,40 @@
               <a class="content__picture" href="#">
                 <span class="content__day">панорама дня</span>
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.webp 1x,
+                    panorama-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x,
+                    panorama-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x,img/panorama-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x,
                      img/panorama-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/panorama-tablet@1x.jpg 1x,
                     img/panorama-tablet@2x.jpg 2x">
-                  <img  class="content__image content__image--big" src="img/panorama-mobile@1x.jpg" srcset=
-                    "img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Панорама дня">
+                  <img class="content__image content__image--big" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Панорама дня">
                 </picture></a>
               <div class="content__description description-big">
               <p class="description__author-name">Анна<span class="description__time">
-              (5 минут назад)</span</p>
+              (5 минут назад)
               <p class="description__comment">Прыгать или нет? Напишите в комментарии
                свой совет и смотрите прямую трансляцию в перископе, задавайте свои
                 вопросы!</p>
               <p class="description__rating">Нравится: 215</p>
-            </div>
+            </span></p></div>
             </figure>
             <div class="gallery__wrapper">
             <figure class="gallery__content content">
               <a href="content__picture">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.webp 1x,
+                    photo-car-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/car-tablet@1x.webp 1x,
+                    car-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x,photo-car-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg
                     1x, img/photo-car-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-car-tablet@1x.jpg 1x,
                     img/photo-car-tablet@2x.jpg 2x">
-                  <img  class="content__image" src="img/photo-car-mobile@1x.jpg" srcset=
-                    "img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография машины">
+                  <img class="content__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография машины">
                 </picture></a>
               <div class="content__description description">
               <p class="description__author-name">Левон<span class="description__time">
@@ -94,14 +105,18 @@
             <figure class="gallery__content content">
               <a class="content__picture" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.webp 1x,
+                    photo-drumset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="photo-drumset-tablet@1x.webp 1x,
+                    photo-drumset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x,photo-drumset-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg
                     1x, img/photo-drumset-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-drumset-tablet@1x.jpg 1x,
                     img/photo-drumset-tablet@2x.jpg 2x">
-                  <img  class="content__image" src="img/photo-drumset-mobile@1x.jpg" srcset=
-                    "img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография музыкальных инструментов">
+                  <img class="content__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография музыкальных инструментов">
                 </picture></a>
-                </picture></a>
+
               <div class="content__description description">
               <p class="description__author-name">Антон<span class="description__time">
               (12 часов назад)</span></p>
@@ -112,14 +127,18 @@
             <figure class="gallery__content content">
               <a class="content__picture" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.webp 1x,
+                    photo-window-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x,
+                    photo-window-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x,bg/map-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg
                     1x, img/photo-window-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-window-tablet@1x.jpg 1x,
                     img/photo-window-tablet@2x.jpg 2x">
-                  <img  class="content__image" src="img/photo-window-mobile@1x.jpg" srcset=
-                    "img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография окна">
+                  <img class="content__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография окна">
                 </picture></a>
-                 </picture></a>
+
               <div class="content__description description">
               <p class="description__author-name">Борис<span class="description__time">
               (20 часов назад)</span></p>
@@ -131,14 +150,18 @@
             <figure class="gallery__content content">
               <a class="content__picture" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.webp 1x,
+                    photo-fair-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x,
+                    photo-fair-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x,photo-fair-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg
                     1x, img/photo-fair-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-fair-tablet@1x.jpg 1x,
                     img/photo-fair-tablet@2x.jpg 2x">
-                  <img  class="content__image" src="img/photo-fair-mobile@1x.jpg" srcset=
-                    "img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография кубанского рынка">
+                  <img class="content__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография кубанского рынка">
                 </picture></a>
-                </picture></a>
+
                <div class="content__description description">
               <p class="description__author-name">Сергей<span class="description__time">
                (25 часов назад)</span></p>
@@ -149,14 +172,18 @@
             <figure class="gallery__content content">
               <a class="content__picture" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.webp 1x,
+                    photo-pov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x,
+                    photo-pov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x,photo-pov-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg
                     1x, img/photo-pov-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-pov-tablet@1x.jpg 1x,
                     img/photo-pov-tablet@2x.jpg 2x">
-                  <img  class="content__image" src="img/photo-pov-mobile@1x.jpg" srcset=
-                    "img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография горного пейзажа">
+                  <img class="content__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография горного пейзажа">
                 </picture></a>
-                 </picture></a>
+
                <div class="content__description description">
               <p class="description__author-name">Максим<span class="description__time">
                (40 часов назад)</span></p>
@@ -167,14 +194,18 @@
             <figure class="gallery__content content">
               <a class="content__picture" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.webp 1x,
+                    photo-wing-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x,
+                    photo-wing-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x,photo-wing-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg
                     1x, img/photo-wing-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-wing-tablet@1x.jpg 1x,
                     img/photo-wing-tablet@2x.jpg 2x">
-                  <img  class="content__image" src="img/photo-wing-mobile@1x.jpg" srcset=
-                    "img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография крыла самолета">
+                  <img class="content__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография крыла самолета">
                 </picture></a>
-                 </picture></a>
+
               <div class="content__description description">
               <p class="description__author-name">Надежда<span class="description__time">
               (45 часов назад)</span></p>
@@ -183,7 +214,7 @@
             </div>
             </figure>
           </div>
-   </main>
+   </section></main>
 
    <footer class="page-footer">
      <div class="page-footer__wrapper">
@@ -192,20 +223,25 @@
        <div class="page-footer__social social">
          <ul class="social__list">
            <li class="social__item">
-             <a class="social__link social__link--twitter" href="#">Twitter</a>
+             <a class="social__link social__link--facebook" href="#"><span>Facebook</span>
+               <svg width="8.673" height="18.944"><use xlink:href="#icon-facebook"></use></svg>
+             </a>
            </li>
            <li class="social__item">
-             <a class="social__link social__link--facebook" href="#">Facebook</a>
-           </li>
-           <li class="social__item">
-             <a class="social__link social__link--youtube" href="#">Youtube</a>
+             <a class="social__link social__link--youtube" href="#"><span>Youtube</span>
+               <svg width="14.64" height="13.96" viewBox="0 0 14.64 13.96">
+                 <use xlink:href="#icon-youtube"></use></svg>
+             </a>
            </li>
          </ul>
        </div>
        <div class="page-footer__copyright copyright">
          <b class="copyright__text">Разработано</b>
-         <a class=" button copyright__link" href="https://htmlacademy.ru/intensive/
-         adaptive">HTML Academy</a>
+         <a class="copyright__link" href="https://htmlacademy.ru/intensive/
+         adaptive" aria-label="HTMLAcademy">
+         <svg width="16" height="16"><use xlink:href="#icon-logo-htmlacademy"></use></svg>
+       </a>
+
        </div>
      </div>
    </footer>
@@ -227,5 +263,8 @@
       }
     })
    </script>
+   <script src=" /path/to/svg4everybody.js"></script>
+   <script>svg4everybody();</script>
+
    </body>
   </html>
